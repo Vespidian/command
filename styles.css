@@ -1,0 +1,84 @@
+body{
+	color: #ffffff;
+	background-color: #2A3252;
+	color: #000000;
+}
+
+
+#commandField{
+	color: #ffffff;
+
+	background-color: #44627C;
+	border-style: solid;
+	border-width: 1px;
+	
+	
+	border-top-color: #5F9EA5;
+	border-left-color: #5F9EA5;
+	border-bottom-color: #2A3252;
+	border-right-color: #2A3252;
+	
+}
+#enterButton{
+	color: #ffffff;
+	background-color: #44627C;
+	border-top-color: #5F9EA5;
+	border-left-color: #5F9EA5;
+	border-bottom-color: #2A3252;
+	border-right-color: #2A3252;
+}
+#resultField{
+	color: #ffffff;
+	padding: 10px;
+}
+#fields{
+	background-color: #1F203D;
+	padding: 20px;
+	position: absolute;
+	height: 88%;
+	margin: 30px;
+	
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+/*
+
+
+1
+
+9FF9C4
+
+2
+
+8EE4C0
+3
+
+7ECFBB
+4
+
+6EBAB5
+5
+
+5F9EA5
+6
+
+517F91
+7
+
+44627C
+8
+
+374967
+9
+
+2A3252
+10
+
+1F203D
+
+11
+
+161429
+
+*/

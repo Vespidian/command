@@ -1,0 +1,4 @@
+Thursday, July, 5: completed 3 debug commands
+js=>(createitem, itemlist, commandlog) 
+css=>(colorized everything with a semi temporary gradient color scheme)
+
