@@ -43,7 +43,7 @@ function getCommand() {
 	//HELP
 	if(inputField.value == "help"){
 		inputField.value = "";
-		resultField.innerHTML = "Here are some commands: <br> + help <br> + createitem <br> + itemlist <br> + commandlog <br> + monsterstats <br> + ";
+		resultField.innerHTML = "Here are some commands: <br> + help <br> + createitem <br> + itemlist <br> + commandlog <br> + stats <br> + mstats <br> + heal <br> + ";
 		commandLog("command: help");
 	} 
 	//CREATE ITEM
