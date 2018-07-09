@@ -43,7 +43,7 @@ function getCommand() {
 	//HELP
 	if(inputField.value == "help"){
 		inputField.value = "";
-		resultField.innerHTML = "Here are some commands: <br> + help <br> + createitem <br> + itemlist <br> + commandLog <br> + ";
+		resultField.innerHTML = "Here are some commands: <br> + help <br> + createitem <br> + itemlist <br> + commandlog <br> + monsterstats <br> + ";
 		commandLog("command: help");
 	} 
 	//CREATE ITEM
@@ -69,5 +69,28 @@ function getCommand() {
 		inputField.value = "";
 		resultField.innerHTML = "Here is the current command log: <br>" + readableLog;
 		commandLog("command: commandLog");
-	} 
+		
+	}
+	
+	//RPG COMMANDS
+	//MONSTER
+	if(inputField.value == "stats"){
+			inputField.value = "";
+			resultField.innerHTML = "Your current stats are <br> + "  + pStats.health + " health. <br> + " + pStats.defense + " defense";
+			commandLog("command: playerStats");
+		} 
+	if(inputField.value == "mstats"){
+			inputField.value = "";
+			resultField.innerHTML = "The current monster's stats are <br> + "  + mStats.health + " health. <br> + " + mStats.defense + " defense";
+			commandLog("command: monst	erStats");
+		} 
+	if(inputField.value == "heal"){
+		if(inventory.healthPotion >= 1){
+			pStats.health += 10;
+			
+			inputField.value = "";
+			resultField.innerHTML = "Character healed for: 10 hp";
+			commandLog("command: heal");
+		}
+		} 
 }
