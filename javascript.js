@@ -29,6 +29,18 @@ function commandLog(cLog) {
 	console.log(cLog);
 }
 
+function getPDamage () {
+	//Player Damage
+	pStats.attack = Math.floor((Math.random() * pStats.maxDmg) + pStats.minDmg);
+	
+}
+
+function getMDamage () {
+	//Monster Damage
+	mStats.attack = Math.floor((Math.random() * mStats.maxDmg) + mStats.minDmg);
+	
+}
+
 function getCommand() {
 	var resultField = document.getElementById("resultField");
 	var inputField = document.getElementById("commandField");
@@ -82,7 +94,7 @@ function getCommand() {
 	if(inputField.value == "mstats"){
 			inputField.value = "";
 			resultField.innerHTML = "The current monster's stats are <br> + "  + mStats.health + " health. <br> + " + mStats.defense + " defense";
-			commandLog("command: monst	erStats");
+			commandLog("command: monsterStats");
 		} 
 	if(inputField.value == "heal"){
 		if(inventory.healthPotion >= 1){
@@ -92,5 +104,28 @@ function getCommand() {
 			resultField.innerHTML = "Character healed for: 10 hp";
 			commandLog("command: heal");
 		}
+		}
+	if(inputField.value == "attack" && mStats.health >= 1){
+		
+		getPDamage();
+		getMDamage();
+		
+		if(pStats.attack > mStats.health){
+			mStats.health = 0;
+			inputField.value = "";
+			resultField.innerHTML = "You successfully killed that horrible creature.. Gud job! :D";
+		}else if (mStats.attack > pStats.health){
+			pStats.health = 0;
+			inputField.value = "";
+			resultField.innerHTML = "You died...";
+		}else{
+
+			mStats.health -= pStats.attack;
+			pStats.health -= mStats.attack;
+		
+			inputField.value = "";
+			resultField.innerHTML = "You hit the monster for: <br>" + pStats.attack + " points of damage! <br>You have " + pStats.health + " points of health left.<br><br> It hit you back for: <br>" + mStats.attack + " points of damage! <br>It has " + mStats.health + " points of health left.";
+		}
+			commandLog("command: attack");
 		} 
 }
