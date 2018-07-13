@@ -1,13 +1,15 @@
 body{
 	color: #ffffff;
 	background-color: #2A3252;
-	color: #000000;
 }
 
 
 #commandField{
 	color: #ffffff;
 
+	position: absolute;
+	width: 80%;
+	
 	background-color: #44627C;
 	border-style: solid;
 	border-width: 1px;
@@ -26,6 +28,8 @@ body{
 	border-left-color: #5F9EA5;
 	border-bottom-color: #2A3252;
 	border-right-color: #2A3252;
+	
+	visibility: hidden;
 }
 #resultField{
 	color: #ffffff;
@@ -36,10 +40,11 @@ body{
 	padding: 20px;
 	position: absolute;
 	height: 88%;
+	width: 250px;
 	margin: 30px;
-	
 	left: 50%;
 	transform: translate(-50%, 0);
+
 }
 
 /*
